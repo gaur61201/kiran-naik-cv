@@ -994,6 +994,37 @@ button:focus-visible {
   margin-bottom: 36px;
 }
 
+.footer-phone {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-cream-mid);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.footer-phone-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.footer-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-dark);
+  border-radius: 50%;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
 .btn-download {
   display: inline-flex;
   align-items: center;
