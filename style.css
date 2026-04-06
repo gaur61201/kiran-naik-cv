@@ -1273,6 +1273,15 @@ button:focus-visible {
     gap: 48px;
   }
 
+  .skill-tags {
+    gap: 8px;
+  }
+
+  .skill-tag {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
   /* ─── Awards Mobile ────────────────────────────────── */
   .awards-inline {
     flex-direction: column;
