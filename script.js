@@ -546,55 +546,67 @@
     if (!wrapper) return;
 
     // Scale down the entire hero (creates depth/receding effect)
-    gsap.to('.hero', {
-      scale: 0.92,
-      borderRadius: '16px',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: wrapper,
-        start: 'bottom bottom',   // animation starts when wrapper bottom hits viewport bottom
-        end: 'bottom top',        // ends when wrapper bottom exits viewport top
-        scrub: true,
-      },
-    });
+    gsap.fromTo('.hero',
+      { scale: 1, borderRadius: '0px' },
+      {
+        scale: 0.92,
+        borderRadius: '16px',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'bottom bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
 
     // Text fades out faster — first 40% of the scroll range
-    gsap.to('.hero-text-content', {
-      opacity: 0,
-      filter: 'blur(8px)',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: wrapper,
-        start: 'bottom bottom',
-        end: 'bottom 60%',        // text gone by 60% viewport height
-        scrub: true,
-      },
-    });
+    gsap.fromTo('.hero-text-content',
+      { opacity: 1, filter: 'blur(0px)' },
+      {
+        opacity: 0,
+        filter: 'blur(8px)',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'bottom bottom',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+      }
+    );
 
     // Monogram moves up + fades over full range
-    gsap.to('.monogram-wrapper', {
-      y: -60,
-      opacity: 0.3,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: wrapper,
-        start: 'bottom bottom',
-        end: 'bottom top',
-        scrub: true,
-      },
-    });
+    gsap.fromTo('.monogram-wrapper',
+      { y: 0, opacity: 1 },
+      {
+        y: -60,
+        opacity: 0.3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'bottom bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
 
     // Corner frames fade out in first half
-    gsap.to('.hero-frame', {
-      opacity: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: wrapper,
-        start: 'bottom bottom',
-        end: 'bottom 50%',
-        scrub: true,
-      },
-    });
+    gsap.fromTo('.hero-frame',
+      { opacity: 0.25 },
+      {
+        opacity: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'bottom bottom',
+          end: 'bottom 50%',
+          scrub: true,
+        },
+      }
+    );
 
     // Dark overlay intensifies: 0.15 → 0.5
     gsap.fromTo('.hero-overlay',
