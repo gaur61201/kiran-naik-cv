@@ -1182,10 +1182,10 @@ button:focus-visible {
     order: 2;
   }
 
-  .split-layout--reverse .split-left {
+  .exp-entry .split-layout--reverse .split-left {
     order: 2;
   }
-  .split-layout--reverse .split-right {
+  .exp-entry .split-layout--reverse .split-right {
     order: 1;
   }
 
