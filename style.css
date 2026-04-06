@@ -170,7 +170,7 @@ button:focus-visible {
   position: relative;
   z-index: 1;
   /* Height = viewport (hero sticks) + extra scroll distance for the effect */
-  height: 200vh;
+  height: 150vh;
 }
 
 .hero {
