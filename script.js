@@ -462,7 +462,7 @@
   // AWARDS COMPACT
   // ═══════════════════════════════════════════════════════════
   function awardsAnimation() {
-    var el = document.querySelector('.awards-inline');
+    var el = document.querySelector('.awards-marquee');
     if (!el) return;
     gsap.set(el, { opacity: 0, y: 20 });
     gsap.to(el, {

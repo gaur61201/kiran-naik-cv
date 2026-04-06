@@ -812,33 +812,53 @@ button:focus-visible {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   AWARDS & CERTIFICATIONS — Compact Single Line
+   AWARDS — Marquee Carousel
    ═══════════════════════════════════════════════════════════ */
-.awards-compact {
-  padding: 48px 0;
+.awards-section {
+  padding: 80px 0 60px;
   background: var(--bg-cream);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.awards-inline {
+.awards-marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.awards-track {
   display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: awards-scroll 25s linear infinite;
+}
+
+.award-card {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dark);
 }
 
-.awards-icon {
+.award-icon {
   flex-shrink: 0;
-  opacity: 0.35;
 }
 
-.awards-text {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-style: italic;
-  color: var(--text-muted);
-  letter-spacing: 0.01em;
+@keyframes awards-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1059,7 +1079,7 @@ button:focus-visible {
   opacity: 0;
 }
 
-.awards-inline,
+.awards-marquee,
 .lang-card,
 .footer-monogram,
 .footer-tagline,
@@ -1088,7 +1108,7 @@ button:focus-visible {
   .experience .section-label,
   .expertise-col,
   .skill-tag,
-  .awards-inline,
+  .awards-marquee,
   .lang-card,
   .footer-monogram,
   .footer-tagline,
@@ -1287,14 +1307,13 @@ button:focus-visible {
   }
 
   /* ─── Awards Mobile ────────────────────────────────── */
-  .awards-inline {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+  .awards-track {
+    animation-duration: 15s;
   }
 
-  .awards-inline .awards-icon:last-child {
-    display: none;
+  .award-card {
+    padding: 10px 20px;
+    font-size: 10px;
   }
 
   /* ─── Languages Mobile ─────────────────────────────── */
