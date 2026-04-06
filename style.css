@@ -777,9 +777,9 @@ button:focus-visible {
   font-size: 11px;
   letter-spacing: 0.03em;
   padding: 10px 18px;
-  color: var(--text-mid);
-  background: rgba(253, 246, 240, 0.7);
-  border: 1px solid var(--border);
+  color: var(--text-dark);
+  background: var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 3px;
   transition: all 0.3s ease;
   cursor: default;
@@ -790,21 +790,21 @@ button:focus-visible {
   content: '';
   width: 4px;
   height: 4px;
-  background: var(--accent);
+  background: #fff;
   transform: rotate(45deg);
   flex-shrink: 0;
   transition: background 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background: #fff;
+  color: var(--text-dark);
+  border-color: var(--border);
   box-shadow: 0 2px 12px rgba(196, 149, 106, 0.25);
 }
 
 .skill-tag:hover::before {
-  background: #fff;
+  background: var(--accent);
 }
 
 /* ═══════════════════════════════════════════════════════════
