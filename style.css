@@ -416,20 +416,27 @@ button:focus-visible {
   position: relative;
 }
 
-/* About profile photo */
-.about-photo {
+/* Decorative art panel */
+.about-art {
   position: relative;
   aspect-ratio: 3 / 4;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(145deg, var(--accent-light) 0%, var(--bg-tan) 40%, var(--accent-light) 100%);
 }
 
-.about-photo img {
+.about-art-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-art-svg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .about-content {
