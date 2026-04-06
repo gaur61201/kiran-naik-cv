@@ -229,7 +229,7 @@
             start: 'top 85%',
             toggleActions: 'play none none none',
           },
-          opacity: 0.08,
+          opacity: 0.25,
           y: 0,
           duration: 0.8,
           ease: 'power2.out',
